@@ -11,57 +11,43 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
-
+  <script src="HomePage.js"></script>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg" style="border: 1px solid; padding: 0.5% 0%;">
-      <div class="container-fluid">
-        <!-- Navbar Brand Icon -->
-        <a class="navbar-brand" href="" style="border: 1px solid; margin: 0;">
-          <img src="Assets\Geeks Logo.svg" alt="Geeks" />
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border: 1px solid; padding: 0.5% 0%;">
+      <!-- Navbar Brand Icon -->
+      <a class="navbar-brand" href="" style="border: 1px solid; margin: 0;">
+        <img src="Assets\Geeks Logo.svg" alt="Geeks" />
+      </a>
+
+      <!-- Day Light Button -->
+      <div class="navbar-left d-flex align-items-center order-lg-2">
+        <a type="button"
+          style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center; border: none;">
+          <div class="image-container">
+            <i class="fa-solid fa-sun" style="padding-top:25%; padding-left: 25%; font-size: 20px; color: gray;"></i>
+          </div>
         </a>
 
-        <div class="navbar-left d-flex align-items-center order-lg-2">
-          <a type="button"
-            style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center; border: none;">
-            <div class="image-container">
-              <i class="fa-solid fa-sun" style="padding-top:25%; padding-left: 25%; font-size: 20px; color: gray;"></i>
-            </div>
-          </a>
+        <!-- Notifications -->
+        <a data-bs-toggle="popover" data-bs-trigger="hover"
+          data-bs-content="<div>Notifications </div><hr><div>Notification 2</div><hr><div>Notification 3</div>"
+          data-bs-html="true" data-bs-placement="bottom"
+          style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center; border: 1px solid;">
+          <div class="image-container">
+            <i class="fa-regular fa-bell"
+              style="padding-top: 22%; padding-left: 25%; font-size: 22px; color: gray;"></i>
+          </div>
+        </a>
 
-          <!-- Notifications -->
-          <a data-bs-toggle="popover" data-bs-trigger="hover"
-            data-bs-content="<div>Notifications </div><hr><div>Notification 2</div><hr><div>Notification 3</div>"
-            data-bs-html="true" data-bs-placement="bottom"
-            style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center; border: 1px solid;">
-            <div class="image-container">
-              <i class="fa-regular fa-bell"
-                style="padding-top: 22%; padding-left: 25%; font-size: 22px; color: gray;"></i>
-            </div>
-          </a>
-
-          <!-- Include Bootstrap JS and Popper.js -->
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-
-          <!-- Initialize Popover -->
-          <script>
-            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-              return new bootstrap.Popover(popoverTriggerEl)
-            })
-          </script>
-
-          <!-- Avatar Button -->
-          <div class="avatar">
-            <a type="button" class="avatar-button" id="avatarPopover" data-bs-toggle="popover" data-bs-html="true"
-              data-bs-content='
+        <!-- Avatar Button -->
+        <div class="avatar">
+          <a type="button" class="avatar-button" id="avatarPopover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true"
+            data-bs-content='
               <div class="">
                 <div class="d-flex">
                   <div style="width: 10px; border: 1px solid; display: flex;">
@@ -82,130 +68,115 @@
                 <p><i class="fa-solid fa-power-off"></i>Sign Out</p>
               </div>
           </div>
-
           '>
-              <img class="avatar-img" src="Assets/Avatar.jpg" alt="">
-            </a>
-          </div>
-
-          <!-- Include Bootstrap JS and dependencies -->
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-          <script>
-            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-              return new bootstrap.Popover(popoverTriggerEl, {
-                trigger: 'hover',
-                placement: 'bottom'
-              })
-            })
-          </script>
-
-          <!-- Button for Menu Bar -->
-          <button type="button" class="navbar-toggler collapsed data-bs-toggle=" collapse" data-bs-target="#myNavbar"
-            style="  padding: 1% 2%; border: 1px solid #754ffe; margin-left: 3%;">
-            <span class="navbar-toggler-icon" style="color:#754ffe;"></span>
-          </button>
+            <img class="avatar-img" src="Assets/Avatar.jpg" alt="">
+          </a>
         </div>
 
-        <!-- Collapsing Navbar -->
-        <div class="collapse navbar-collapse order-lg-1" id="myNavbar" style="border: 1px solid;">
-          <!-- Browse Navbar with dropdown -->
-          <div style="width: auto;">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border: 1px solid;">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Browse</a>
+        <!-- Button for Menu Bar -->
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+          style="padding: 1% 2%; border: 1px solid #754ffe; margin-left: 3%;">
+          <span class="navbar-toggler-icon" style="color:#754ffe;"></span>
+        </button>
+      </div>
 
-                <!-- dropdown list for Browse -->
-                <ul class="dropdown-menu">
-                  <li class="dropdown-item">
+      <!-- Collapsing Navbar -->
+      <div class="collapse navbar-collapse order-lg-1" id="myNavbar" style="border: 1px solid;">
+        <!-- Browse Navbar with dropdown -->
+        <div style="width: auto;">
+          <ul class="navbar-nav me-auto" style="border: 1px solid;">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">Browse</a>
 
-                    <!-- Actual Drop Down of Web Development -->
-                    <div class="dropdown dropend">
-                      <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
-                        Web Development
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li class="dropdown-item">Hello</li>
-                      </ul>
-                    </div>
-                  </li>
+              <!-- dropdown list for Browse -->
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
 
-                  <li class="dropdown-item">Design</li>
-                  <li class="dropdown-item">Mobile App</li>
-                  <li class="dropdown-item">IT Software</li>
-                  <li class="dropdown-item">Marketing</li>
-                  <li class="dropdown-item">Music</li>
-                  <li class="dropdown-item">Lifestyle</li>
-                  <li class="dropdown-item">Business</li>
-                  <li class="dropdown-item">Photography</li>
-                </ul>
-                <hr class="d-none d-sm-block d-lg-none">
+                  <!-- Actual Drop Down of Web Development -->
+                  <div class="dropdown dropend">
+                    <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
+                      Web Development
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item">Hello</li>
+                    </ul>
+                  </div>
+                </li>
 
-              </li>
+                <li class="dropdown-item">Design</li>
+                <li class="dropdown-item">Mobile App</li>
+                <li class="dropdown-item">IT Software</li>
+                <li class="dropdown-item">Marketing</li>
+                <li class="dropdown-item">Music</li>
+                <li class="dropdown-item">Lifestyle</li>
+                <li class="dropdown-item">Business</li>
+                <li class="dropdown-item">Photography</li>
+              </ul>
+              <hr class="d-none d-sm-block d-lg-none">
 
-              <li class="navbar-item dropdown">
-                <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Landings</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-item">Education</li>
-                  <li class="dropdown-item">Home Academy</li>
-                  <li class="dropdown-item">Courses</li>
-                  <li class="dropdown-item">Lead COurse</li>
-                  <li class="dropdown-item">Request Access</li>
-                  <li class="dropdown-item">Saas</li>
-                  <li class="dropdown-item">Job Listing</li>
-                </ul>
-                <hr class="d-none d-sm-block d-lg-none">
-              </li>
+            </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-item">Courses</li>
-                  <li class="dropdown-item">Path</li>
-                  <li class="dropdown-item">Blog</li>
-                  <li class="dropdown-item">Career</li>
-                  <li class="dropdown-item">Portfolio</li>
-                  <li class="dropdown-item">Job</li>
-                  <li class="dropdown-item">Speciality</li>
-                  <hr />
-                  <li class="dropdown-item">About</li>
-                  <li class="dropdown-item">Help center</li>
-                  <li class="dropdown-item">Pricing</li>
-                  <li class="dropdown-item">Compare Plan</li>
-                  <li class="dropdown-item">Contact</li>
-                </ul>
-                <hr class="d-none d-sm-block d-lg-none">
+            <li class="navbar-item dropdown">
+              <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Landings</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">Education</li>
+                <li class="dropdown-item">Home Academy</li>
+                <li class="dropdown-item">Courses</li>
+                <li class="dropdown-item">Lead COurse</li>
+                <li class="dropdown-item">Request Access</li>
+                <li class="dropdown-item">Saas</li>
+                <li class="dropdown-item">Job Listing</li>
+              </ul>
+              <hr class="d-none d-sm-block d-lg-none">
+            </li>
 
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle  text-black" href="" data-bs-toggle="dropdown">
-                  Accounts
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-item">Instrructor</li>
-                  <li class="dropdown-item">Student</li>
-                  <li class="dropdown-item">Admin</li>
-                  <hr />
-                  <li class="dropdown-item">Sign In</li>
-                  <li class="dropdown-item">Sign Up</li>
-                  <li class="dropdown-item">Forgot Password</li>
-                  <li class="dropdown-item">Edit Profile</li>
-                  <li class="dropdown-item">Security</li>
-                  <li class="dropdown-item">Social Profile</li>
-                  <li class="dropdown-item">Notifications</li>
-                  <li class="dropdown-item">Privacy Settings</li>
-                  <li class="dropdown-item">Delete Profile</li>
-                  <li class="dropdown-item">Linked Accounts</li>
-                </ul>
-                <hr class="d-none d-sm-block d-lg-none">
-              </li>
-            </ul>
-          </div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Pages</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">Courses</li>
+                <li class="dropdown-item">Path</li>
+                <li class="dropdown-item">Blog</li>
+                <li class="dropdown-item">Career</li>
+                <li class="dropdown-item">Portfolio</li>
+                <li class="dropdown-item">Job</li>
+                <li class="dropdown-item">Speciality</li>
+                <hr />
+                <li class="dropdown-item">About</li>
+                <li class="dropdown-item">Help center</li>
+                <li class="dropdown-item">Pricing</li>
+                <li class="dropdown-item">Compare Plan</li>
+                <li class="dropdown-item">Contact</li>
+              </ul>
+              <hr class="d-none d-sm-block d-lg-none">
 
-          <!-- Options -->
-          <div class="options" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content='
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  text-black" href="" data-bs-toggle="dropdown">
+                Accounts
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">Instructor</li>
+                <li class="dropdown-item">Student</li>
+                <li class="dropdown-item">Admin</li>
+                <hr />
+                <li class="dropdown-item">Sign In</li>
+                <li class="dropdown-item">Sign Up</li>
+                <li class="dropdown-item">Forgot Password</li>
+                <li class="dropdown-item">Edit Profile</li>
+                <li class="dropdown-item">Security</li>
+                <li class="dropdown-item">Social Profile</li>
+                <li class="dropdown-item">Notifications</li>
+                <li class="dropdown-item">Privacy Settings</li>
+                <li class="dropdown-item">Delete Profile</li>
+                <li class="dropdown-item">Linked Accounts</li>
+              </ul>
+              <hr class="d-none d-sm-block d-lg-none">
+            </li>
+          </ul>
+        </div>
+
+        <!-- Options -->
+        <div class="options" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content='
                  <div class="options-popover">
                    <div class="popover-body">
                      <a href="#" style="text-decoration: none;">
@@ -219,29 +190,28 @@
                      </a>
                    </div>
                  </div>' data-bs-placement="bottom">
-            <img style="height: 20px" src="Assets\Options.svg" alt="Options" />
-          </div>
-
-          <!-- Include Bootstrap JS and Popper.js -->
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-
-          <!-- Initialize Popover -->
-          <script>
-            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-              return new bootstrap.Popover(popoverTriggerEl)
-            })
-          </script>
-          <hr class="d-none d-sm-block d-lg-none">
-
-          <!-- Search Form -->
-          <form class="search-bar" action="">
-            <span><i class="fas fa-search"
-                style="color: rgb(149, 149, 149); position: absolute; padding-top: 0.73%; padding-left: 0.5%;"></i></span>
-            <input class="form-control" type="text" placeholder="Search Courses" style="padding-left: 12%;" />
-          </form>
+          <img style="height: 20px" src="Assets\Options.svg" alt="Options" />
         </div>
+
+        <!-- Include Bootstrap JS and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+        <!-- Initialize Popover -->
+        <script>
+          var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+          var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+          })
+        </script>
+        <hr class="d-none d-sm-block d-lg-none">
+
+        <!-- Search Form -->
+        <form class="search-bar" action="">
+          <span><i class="fas fa-search"
+              style="color: rgb(149, 149, 149); position: absolute; font-size: 80%; padding-top: 0.8%; padding-left: 0.5%;"></i></span>
+          <input class="form-control" type="text" placeholder="Search Courses" id="search-bar-field"></input>
+        </form>
       </div>
     </nav>
   </header>
@@ -256,8 +226,8 @@
       </div>
       <!-- Buttons -->
       <div class="row-lg-12 buttons-container">
-        <button class="btn btn-dark d-flex text-light">Browse Courses</button>
-        <button class="btn btn-light d-flex">Are You Instructor?</button>
+        <button class="btn btn-dark d-flex text-light" style="font-weight: 600;">Browse Courses</button>
+        <button class="btn btn-light d-flex" style="font-weight: 600;">Are You Instructor?</button>
       </div>
     </div>
 
@@ -313,8 +283,9 @@
   <div class="container-fluid cards-container-1">
     <br>
     <br>
-    <h1 style="padding-left: 5%;">Recommended to you</h1>
+    <h4>Recommended to you</h4>
     <br>
+
 
     <div id="course-card" class="carousel slide course-carousel" data-bs-ride="carousel">
 
@@ -813,7 +784,7 @@
     </div>
 
     <br>
-    <h1 style="padding-left: 5%;">Most Popular</h1>
+    <h4 id="most-popular-h4">Most Popular</h4>
     <br>
 
     <div id="course-card" class="carousel slide course-carousel" data-bs-ride="carousel">
@@ -1316,7 +1287,7 @@
     <div class="container-fluid footer row">
 
       <div class="col-md-6 d-flex justify-content-md-start justify-content-center align-items-center">
-        <p style="color:rgb(55, 55, 55); padding-left: 8%;">© 2023 Geeks. All Rights Reserved.
+        <p id="footer-p">© 2023 Geeks. All Rights Reserved.
         </p>
       </div>
 
