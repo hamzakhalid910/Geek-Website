@@ -2,35 +2,30 @@
   display: block;
 }
 
-.options {
-  width: 25px;
-  margin-left: 0.8%;
-}
 
-.search-bar {
-  width: 300px;
-  padding-left: 10px;
-}
-
-.search-bar-field {
-  padding-left: 20px;
+.dropdown-menu{
+  display: block;
 }
 
 .navbar-left {
   display: flex;
-  width: 50%;
+  width: auto;
   justify-content: right;
+  height: auto;
   /* align-self: right; */
+  /* border: 1px solid; */
 }
 
 .image-container {
   background-color: #cdd0d4;
-  height: 45px;
-  width: 45px;
+  height: 38px;
+  width: 38px;
   border-radius: 50%;
   margin-right: 10px;
   justify-content: center;
+  justify-items: center;
   align-items: center;
+  border: none;
 }
 
 .day-light-img {
@@ -43,10 +38,32 @@
   margin-left: 9px;
 }
 
+.avatar-button {
+  height: 38px;
+  width: 38px;
+  object-fit: cover;
+}
+
 .avatar-img {
-  height: 45px;
-  width: 45px;
+  height: 38px;
+  width: 38px;
   border-radius: 50%;
+}
+
+.options {
+  width: auto;
+  margin-left: 0.8%;
+}
+
+.search-bar {
+  width: 20%;
+  margin-left: 1%;
+  justify-items: center;
+  justify-content: cente;
+}
+
+#search-bar-field {
+  padding-left: 12%;
 }
 
 .below-header {
@@ -126,6 +143,12 @@
 .nav-item a:focus,
 .nav-item a:hover {
   color: #754ffe; /* Active color */
+}
+
+.card-header a {
+  justify-content: left;
+  padding-top: 3%;
+  padding-left: 0;
 }
 
 #Rating {
@@ -354,6 +377,20 @@
 }
 
 @media screen and (max-width: 992px) {
+    .nav-item{
+      border: 1px solid;
+      width: 100%;
+    }
+
+    .search-bar{
+      width: 99%;
+    }
+  
+    #search-bar-field {
+      padding-left: 3%;
+      border: 1px solid;
+    }
+  
   .below-header-1 h2 {
     padding-top: 1%;
     padding-left: 8%;
@@ -383,7 +420,7 @@
   .below-header-2-course-level {
     display: none;
   }
-  .rating-percentage{
+  .rating-percentage {
     padding-left: 10%;
   }
   .review-bars {

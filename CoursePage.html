@@ -22,146 +22,205 @@
 </head>
 
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid ">
-      <!-- Navbar Brand Icon -->
-      <a class="navbar-brand" href="">
-        <img src="Assets\Geeks Logo.svg" alt="Geeks" />
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0.5% 0%;">
+    <!-- Navbar Brand Icon -->
+    <a class="navbar-brand" href="" style=" margin: 0;">
+      <img src="Assets\Geeks Logo.svg" alt="Geeks" />
+    </a>
+
+    <!-- Day Light Button -->
+    <div class="navbar-left d-flex align-items-center order-lg-2">
+      <a type="button"
+        style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center; border: none;">
+        <div class="image-container">
+          <i class="fa-solid fa-sun" style="padding-top:25%; padding-left: 25%; font-size: 20px; color: gray;"></i>
+        </div>
       </a>
 
+      <!-- Notifications -->
+      <a data-bs-toggle="popover" data-bs-trigger="hover"
+        data-bs-content="<div>Notifications </div><hr><div>Notification 2</div><hr><div>Notification 3</div>"
+        data-bs-html="true" data-bs-placement="bottom"
+        style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center;">
+        <div class="image-container">
+          <i class="fa-regular fa-bell"
+            style="padding-top: 22%; padding-left: 25%; font-size: 22px; color: gray;"></i>
+        </div>
+      </a>
 
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <!-- Browse Navbar with dropdown -->
-        <ul class="navbar-nav" style="color: black;">
+      <!-- Avatar Button -->
+      <div class="avatar">
+        <a type="button" class="avatar-button" id="avatarPopover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true"
+          data-bs-content='
+            <div class="">
+              <div class="d-flex">
+                <div style="width: 10px; border: 1px solid; display: flex;">
+                  <img class="avatar-card" src="Assets/Avatar.jpg" alt="">
+                  <div style="border: 1px solid; left: 0;">
+                    <dt style="color: black;">Annette Black</dt>
+                    <dd style="color: gray;">annette@geeksui.com</dd>
+                  </div>
+                </div>
+                
+              </div>
+              <hr>
+              <span>
+              <p style="margin-left:10px;"><i class="fa-regular fa-user" style="padding-right: 10%; width:"></i>Profile</p></span>
+              <p><i class="fa-regular fa-star"></i>Description</p>
+              <p><i class="fa-solid fa-gear"></i>Settings</p>
+              <hr>
+              <p><i class="fa-solid fa-power-off"></i>Sign Out</p>
+            </div>
+        </div>
+        '>
+          <img class="avatar-img" src="Assets/Avatar.jpg" alt="">
+        </a>
+      </div>
+
+      <!-- Button for Menu Bar -->
+      <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+        style="padding: 1% 2%; border: 1px solid #754ffe; margin-left: 3%;">
+        <span class="navbar-toggler-icon" style="color:#754ffe;"></span>
+      </button>
+    </div>
+
+    <!-- Collapsing Navbar -->
+    <div class="collapse navbar-collapse order-lg-1" id="myNavbar" >
+      <!-- Browse Navbar with dropdown -->
+      <div style="width: auto;">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item dropdown">
-            <!-- Changed href to "#" to prevent page refresh -->
             <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">Browse</a>
 
             <!-- dropdown list for Browse -->
             <ul class="dropdown-menu">
-              <li>
+              <li class="dropdown-item">
+
                 <!-- Actual Drop Down of Web Development -->
                 <div class="dropdown dropend">
-                  <!-- Changed href to "#" to prevent page refresh -->
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                  <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
                     Web Development
                   </a>
                   <ul class="dropdown-menu">
-                    <!-- Moved dropdown-item class to a child element -->
-                    <li><a class="dropdown-item" href="#">Hello</a></li>
+                    <li class="dropdown-item">Hello</li>
                   </ul>
                 </div>
               </li>
 
-              <!-- Moved dropdown-item class to a child element -->
-              <li><a class="dropdown-item" href="#">Design</a></li>
-              <li><a class="dropdown-item" href="#">Mobile App</a></li>
-              <li><a class="dropdown-item" href="#">IT Software</a></li>
-              <li><a class="dropdown-item" href="#">Marketing</a></li>
-              <li><a class="dropdown-item" href="#">Music</a></li>
-              <li><a class="dropdown-item" href="#">Lifestyle</a></li>
-              <li><a class="dropdown-item" href="#">Business</a></li>
-              <li><a class="dropdown-item" href="#">Photography</a></li>
+              <li class="dropdown-item">Design</li>
+              <li class="dropdown-item">Mobile App</li>
+              <li class="dropdown-item">IT Software</li>
+              <li class="dropdown-item">Marketing</li>
+              <li class="dropdown-item">Music</li>
+              <li class="dropdown-item">Lifestyle</li>
+              <li class="dropdown-item">Business</li>
+              <li class="dropdown-item">Photography</li>
             </ul>
+            <hr class="d-none d-sm-block d-lg-none">
+
           </li>
 
           <li class="navbar-item dropdown">
-            <!-- Changed href to "#" to prevent page refresh -->
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Landings</a>
+            <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Landings</a>
             <ul class="dropdown-menu">
-              <!-- Moved dropdown-item class to a child element -->
-              <li><a class="dropdown-item" href="#">Education</a></li>
-              <li><a class="dropdown-item" href="#">Home Academy</a></li>
-              <li><a class="dropdown-item" href="#">Courses</a></li>
-              <li><a class="dropdown-item" href="#">Lead Course</a></li>
-              <li><a class="dropdown-item" href="#">Request Access</a></li>
-              <li><a class="dropdown-item" href="#">Saas</a></li>
-              <li><a class="dropdown-item" href="#">Job Listing</a></li>
+              <li class="dropdown-item">Education</li>
+              <li class="dropdown-item">Home Academy</li>
+              <li class="dropdown-item">Courses</li>
+              <li class="dropdown-item">Lead COurse</li>
+              <li class="dropdown-item">Request Access</li>
+              <li class="dropdown-item">Saas</li>
+              <li class="dropdown-item">Job Listing</li>
             </ul>
+            <hr class="d-none d-sm-block d-lg-none">
           </li>
 
           <li class="nav-item dropdown">
-            <!-- Changed href to "#" to prevent page refresh -->
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+            <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Pages</a>
             <ul class="dropdown-menu">
-              <!-- Moved dropdown-item class to a child element -->
-              <li><a class="dropdown-item" href="#">Courses</a></li>
-              <li><a class="dropdown-item" href="#">Path</a></li>
-              <li><a class="dropdown-item" href="#">Blog</a></li>
-              <li><a class="dropdown-item" href="#">Career</a></li>
-              <li><a class="dropdown-item" href="#">Portfolio</a></li>
-              <li><a class="dropdown-item" href="#">Job</a></li>
-              <li><a class="dropdown-item" href="#">Speciality</a></li>
+              <li class="dropdown-item">Courses</li>
+              <li class="dropdown-item">Path</li>
+              <li class="dropdown-item">Blog</li>
+              <li class="dropdown-item">Career</li>
+              <li class="dropdown-item">Portfolio</li>
+              <li class="dropdown-item">Job</li>
+              <li class="dropdown-item">Speciality</li>
               <hr />
-              <li><a class="dropdown-item" href="#">About</a></li>
-              <li><a class="dropdown-item" href="#">Help center</a></li>
-              <li><a class="dropdown-item" href="#">Pricing</a></li>
-              <li><a class="dropdown-item" href="#">Compare Plan</a></li>
-              <li><a class="dropdown-item" href="#">Contact</a></li>
+              <li class="dropdown-item">About</li>
+              <li class="dropdown-item">Help center</li>
+              <li class="dropdown-item">Pricing</li>
+              <li class="dropdown-item">Compare Plan</li>
+              <li class="dropdown-item">Contact</li>
             </ul>
+            <hr class="d-none d-sm-block d-lg-none">
+
           </li>
           <li class="nav-item dropdown">
-            <!-- Changed href to "#" to prevent page refresh -->
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link dropdown-toggle  text-black" href="" data-bs-toggle="dropdown">
               Accounts
             </a>
             <ul class="dropdown-menu">
-              <!-- Moved dropdown-item class to a child element -->
-              <li><a class="dropdown-item" href="#">Instructor</a></li>
-              <li><a class="dropdown-item" href="#">Student</a></li>
-              <li><a class="dropdown-item" href="#">Admin</a></li>
+              <li class="dropdown-item">Instructor</li>
+              <li class="dropdown-item">Student</li>
+              <li class="dropdown-item">Admin</li>
               <hr />
-              <li><a class="dropdown-item" href="#">Sign In</a></li>
-              <li><a class="dropdown-item" href="#">Sign Up</a></li>
-              <li><a class="dropdown-item" href="#">Forgot Password</a></li>
-              <li><a class="dropdown-item" href="#">Edit Profile</a></li>
-              <li><a class="dropdown-item" href="#">Security</a></li>
-              <li><a class="dropdown-item" href="#">Social Profile</a></li>
-              <li><a class="dropdown-item" href="#">Notifications</a></li>
-              <li><a class="dropdown-item" href="#">Privacy Settings</a></li>
-              <li><a class="dropdown-item" href="#">Delete Profile</a></li>
-              <li><a class="dropdown-item" href="#">Linked Accounts</a></li>
+              <li class="dropdown-item">Sign In</li>
+              <li class="dropdown-item">Sign Up</li>
+              <li class="dropdown-item">Forgot Password</li>
+              <li class="dropdown-item">Edit Profile</li>
+              <li class="dropdown-item">Security</li>
+              <li class="dropdown-item">Social Profile</li>
+              <li class="dropdown-item">Notifications</li>
+              <li class="dropdown-item">Privacy Settings</li>
+              <li class="dropdown-item">Delete Profile</li>
+              <li class="dropdown-item">Linked Accounts</li>
             </ul>
+            <hr class="d-none d-sm-block d-lg-none">
           </li>
         </ul>
-
-        <div class="options">
-          <img style="height: 20px" src="Assets\Options.svg" alt="Options" />
-        </div>
-
-        <form class="search-bar" action="">
-          <input class="form-control search-bar-field" type="text" placeholder="Search Courses" />
-        </form>
       </div>
 
-
-      <div class="navbar-left">
-        <button class="btn"
-          style="width: auto; height: 8%; margin-right: 1%; padding: 0; justify-items: center; border: 1px solid;">
-          <div class="image-container">
-            <i class="fa-solid fa-sun" style="padding-top: 25%; font-size: 22px; color: gray;"></i>
-          </div>
-        </button>
-
-        <button class="btn"
-          style="width: auto; height: 8%; margin-right: 1%; padding: 0; justify-items: center; border: 1px solid;">
-          <div class="image-container">
-            <i class="fa-regular fa-bell" style="padding-top: 25%; font-size: 22px; color: gray;"></i>
-          </div>
-        </button>
-
-        <div class="avatar ">
-          <img class="avatar-img" src="Assets\Avatar.jpg" alt="">
-        </div>
-
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myNavbar"
-          style="border: 1px solid;">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Options -->
+      <div class="options" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content='
+               <div class="options-popover">
+                 <div class="popover-body">
+                   <a href="#" style="text-decoration: none;">
+                     <i class="fas fa-book me-2"></i> Documentations
+                   </a>
+                 </div>
+                 <hr>
+                 <div class="popover-body">
+                   <a href="#" style="text-decoration: none;">
+                     <i class="fas fa-file-alt me-2"></i> Change log
+                   </a>
+                 </div>
+               </div>' data-bs-placement="bottom">
+        <img style="height: 20px" src="Assets\Options.svg" alt="Options" />
       </div>
+
+      <!-- Include Bootstrap JS and Popper.js -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+      <!-- Initialize Popover -->
+      <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+      </script>
+      <hr class="d-none d-sm-block d-lg-none">
+
+      <!-- Search Form -->
+      <form class="search-bar" action="">
+        <span><i class="fas fa-search"
+            style="color: rgb(149, 149, 149); position: absolute; font-size: 80%; padding-top: 0.8%; padding-left: 0.5%;"></i></span>
+        <input class="form-control" type="text" placeholder="Search Courses" id="search-bar-field"></input>
+      </form>
     </div>
   </nav>
 </header>
+
+
 
 <body>
   <!-- Main Header -->
@@ -245,156 +304,164 @@
         <!-- Tab Contents -->
         <div class="tab-content">
           <!-- Setting Active Tab -->
-          <div class="tab-pane container " id="contents">
+          <div class="tab-pane container active " id="contents">
 
             <!-- Card 01 -->
-            <div id="accordion">
-              <div class="card">
-                <div class="card-header">
+            <div id="accordion1">
+              <div class="card" style="width: 100%; border: none;">
+                <div class="card-header d-flex" style="background-color: white;">
+
                   <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
-                    <strong>Introduction to JavaScript</strong>
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Introduction to JavaScript</span>
                   </a>
+
                 </div>
-                <div id="collapseOne" class="collapse " data-bs-parent="#accordion">
+                <div id="collapseOne" class="collapse " data-bs-parent="#accordion1">
                   <div class="card-body">
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%;">
+                      <div>
                         <svg viewBox="0 0 24 24" role="presentation" style="width: 1.2rem; height: 1.2rem;">
                           <path d="M8,5.14V19.14L19,12.14L8,5.14Z" style="fill: currentcolor;"></path>
                         </svg>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>1m 7s</p>
+                      <dd style="padding-left: 4.5%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 7s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%;">
+                      <div style="width: 5%;">
                         <svg viewBox="0 0 24 24" role="presentation" style="width: 1.2rem; height: 1.2rem;">
                           <path d="M8,5.14V19.14L19,12.14L8,5.14Z" style="fill: currentcolor;"></path>
                         </svg>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Installing Developement Software</dd>
-                      <div style="align-items: right;">
-                        <p>3m 11s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Installing Developement Software</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 11s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%;">
+                      <div style="width: 5%;">
                         <svg viewBox="0 0 24 24" role="presentation" style="width: 1.2rem; height: 1.2rem;">
                           <path d="M8,5.14V19.14L19,12.14L8,5.14Z" style="fill: currentcolor;"></path>
                         </svg>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Hello World Project from GitHub</dd>
-                      <div style="align-items: right;">
-                        <p>2m 33s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Hello World Project from GitHub</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 33s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Our Sample Project</dd>
-                      <div style="align-items: right;">
-                        <p>2m 15s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Our Sample Project</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 15s</p>
                       </div>
                     </div>
+
+
+
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 02 -->
             <div id="accordion2">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseTwo">
-                    <strong>JavaScript Beginning</strong>
+              <div class="card" style="width: 90%;border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      JavaScript Beginning/span>
                   </a>
                 </div>
                 <div id="collapseTwo" class="collapse " data-bs-parent="#accordion2">
                   <div class="card-body">
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>1m 41s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 41s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Adding JavaScript Code to a Web Page</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Adding JavaScript Code to a Web Page</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Working with JavaScript Files</dd>
-                      <div style="align-items: right;">
-                        <p>6m 18s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Working with JavaScript Files</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">6m 18s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Formatting Code</dd>
-                      <div style="align-items: right;">
-                        <p>2m 18s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Formatting Code</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 18s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Detecting and Fixing Erros</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Detecting and Fixing Erros</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Case Sensitivity</dd>
-                      <div style="align-items: right;">
-                        <p>1m 48s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Case Sensitivity</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 48s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Commenting Code</dd>
-                      <div style="align-items: right;">
-                        <p>2m 24s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Commenting Code</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 24s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Summary</dd>
-                      <div style="align-items: right;">
-                        <p>2m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Summary</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 14s</p>
                       </div>
                     </div>
 
@@ -406,92 +473,94 @@
             </div>
 
             <div id="accordion3">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseThree">
-                    <strong>Variables and Constants</strong>
+              <div class="card" style="width: 90%;border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Variable and Constants</span>
                   </a>
                 </div>
                 <div id="collapseThree" class="collapse " data-bs-parent="#accordion3">
                   <div class="card-body">
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>1m 19s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 19s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">What is Variable?</dd>
-                      <div style="align-items: right;">
-                        <p>2m 34s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">What is Variable?</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 34s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Declaring Variables</dd>
-                      <div style="align-items: right;">
-                        <p>2m 11s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Declaring Variables</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 11s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Using let to Declare Variable</dd>
-                      <div style="align-items: right;">
-                        <p>3m 18s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Using let to Declare Variable</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 18s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Naming Variables</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Naming Variables</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Changing Variables Values</dd>
-                      <div style="align-items: right;">
-                        <p>2m 33s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Changing Variables Values</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 33s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Keywords</dd>
-                      <div style="align-items: right;">
-                        <p>2m 57s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Keywords</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 57s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Summary</dd>
-                      <div style="align-items: right;">
-                        <p>1m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Summary</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 14s</p>
                       </div>
                     </div>
 
@@ -501,166 +570,171 @@
             </div>
 
             <div id="accordion4">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseFour">
-                    <strong>Programm Flow</strong>
+              <div class="card" style="width: 90%;border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Program Flow</span>
                   </a>
                 </div>
                 <div id="collapseFour" class="collapse " data-bs-parent="#accordionr">
                   <div class="card-body">
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Cliped Watched</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Cliped Watched</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Truthy and Falsy</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Truthy and Falsy</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Comparing === and ==</dd>
-                      <div style="align-items: right;">
-                        <p>2m 33s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Comparing === and ==</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 33s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Looping with for()</dd>
-                      <div style="align-items: right;">
-                        <p>2m 57s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Looping with for()</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 57s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Looping with do ... while()</dd>
-                      <div style="align-items: right;">
-                        <p>2m 33s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Looping with do ... while()</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 33s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Block Scope Using let</dd>
-                      <div style="align-items: right;">
-                        <p>2m 57s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Block Scope Using let</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 57s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Summary</dd>
-                      <div style="align-items: right;">
-                        <p>1m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Summary</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 14s</p>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
 
             <div id="accordion5">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseFive">
-                    <strong>Functions</strong>
+              <div class="card" style="width: 90%;border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Functions</span>
                   </a>
                 </div>
                 <div id="collapseFive" class="collapse " data-bs-parent="#accordion5">
                   <div class="card-body">
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Function Basics</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Function Basics</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Passing Information to Functions</dd>
-                      <div style="align-items: right;">
-                        <p>2m 57s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Passing Information to Functions</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 57s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Function Return Values</dd>
-                      <div style="align-items: right;">
-                        <p>2m 33s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Function Return Values</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 33s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Using Functions to Modify Web Pages</dd>
-                      <div style="align-items: right;">
-                        <p>2m 57s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Using Functions to Modify Web Pages</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 57s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Summary</dd>
-                      <div style="align-items: right;">
-                        <p>1m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Summary</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 14s</p>
                       </div>
                     </div>
 
@@ -670,92 +744,94 @@
             </div>
 
             <div id="accordion6">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseSix">
-                    <strong>Objects and the DOM</strong>
+              <div class="card" style="width: 90%;border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Objects and DOM</span>
                   </a>
                 </div>
                 <div id="collapseSix" class="collapse " data-bs-parent="#accordion6">
                   <div class="card-body">
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Adding JavaScript Code to a Web Page</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Adding JavaScript Code to a Web Page</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Detecting and Fixing Erros</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Detecting and Fixing Erros</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Object Properties</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Object Properties</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Passing Objects to Functions</dd>
-                      <div style="align-items: right;">
-                        <p>2m 57s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Passing Objects to Functions</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 57s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">The Document Object Model (DOM)</dd>
-                      <div style="align-items: right;">
-                        <p>2m 33s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">The Document Object Model (DOM)</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 33s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Detecting Button Clicks</dd>
-                      <div style="align-items: right;">
-                        <p>2m 57s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Detecting Button Clicks</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">2m 57s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Summary</dd>
-                      <div style="align-items: right;">
-                        <p>1m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Summary</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">1m 14s</p>
                       </div>
                     </div>
 
@@ -765,92 +841,94 @@
             </div>
 
             <div id="accordion7">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseSeven">
-                    <strong>Arrays</strong>
+              <div class="card" style="width: 90%;border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Arrays</span>
                   </a>
                 </div>
                 <div id="collapseSeven" class="collapse " data-bs-parent="#accordion7">
                   <div class="card-body">
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Creating and Initializing Arrays</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Creating and Initializing Arrays</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Accessing Array Items</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Accessing Array Items</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Manipulating Arrays</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Manipulating Arrays</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">slice() and splice()</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">slice() and splice()</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Array Searching and Looping</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Array Searching and Looping</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Arrays in the DOM</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Arrays in the DOM</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">DSummary</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">DSummary</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
@@ -860,62 +938,64 @@
             </div>
 
             <div id="accordion8">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseEight">
-                    <strong>Scope and Hoisting</strong>
+              <div class="card" style="width: 90%;border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Scope and Hoisting</span>
                   </a>
                 </div>
                 <div id="collapseEight" class="collapse " data-bs-parent="#accordion8">
                   <div class="card-body">
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Introduction</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Introduction</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Function Scope</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Function Scope</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Var and Hoisting</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Var and Hoisting</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Undeclared Variables and Strict Mode</dd>
-                      <div style="align-items: right;">
-                        <p>3m 39s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Undeclared Variables and Strict Mode</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 39s</p>
                       </div>
                     </div>
 
                     <div class="d-flex width: 100%">
-                      <div style="width: 2%; padding-left: 0.2%;">
+                      <div style="width: 5%; padding-left: 0.2%;">
                         <i class="fa fa-lock"></i>
                       </div>
-                      <dd style="padding-left: 1%; width: 90%;">Summary</dd>
-                      <div style="align-items: right;">
-                        <p>3m 14s</p>
+                      <dd style="padding-left: 2%; margin-left: 1%; ">Summary</dd>
+                      <div style="margin-left: auto ;width: 15%;">
+                        <p style="margin-left: 1%;">3m 14s</p>
                       </div>
                     </div>
 
@@ -925,10 +1005,12 @@
             </div>
 
             <div id="accordion9">
-              <div class="card">
-                <div class="card-header">
-                  <a class="btn dropdown-toggle" data-bs-toggle="collapse" href="#collapseNine">
-                    <strong>Summary</strong>
+              <div class="card" style="width: 100%; border: none;">
+                <div class="card-header d-flex" style="background-color: white;box-shadow: 1px ;">
+                  <a class="btn dropdown-toggle " data-bs-toggle="collapse" href="#collapseOne">
+                    <span
+                      style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 16px ;padding-top: 3%;">
+                      Summary</span>
                   </a>
                 </div>
                 <div id="collapseNine" class="collapse " data-bs-parent="#accordion9">
@@ -937,12 +1019,14 @@
                     <p style="color: grey;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae esse
                       velit eos sunt ab inventore est tenetur blanditiis? Voluptas eius molestiae ad itaque tempora
                       nobis
-                      minima eveniet aperiam molestias, maiores natus expedita dolores ea non possimus magnam corrupt i
+                      minima eveniet aperiam molestias, maiores natus expedita dolores ea non possimus magnam corrupt
+                      i
                       quas rem unde quo enim porro culpa! Quaerat veritatis veniam corrupti iusto.</p>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
 
 
@@ -1008,7 +1092,7 @@
 
 
           <!-- Reviews -->
-          <div class="tab-pane container active" id="reviews">
+          <div class="tab-pane container" id="reviews">
             <div>
               <h5 style="margin-top: 4%;margin-left: 3%;margin-bottom: 3%;">How students rated this courses</h5>
               <div class="d-flex" style="width: auto;">
