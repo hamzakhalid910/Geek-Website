@@ -68,43 +68,44 @@
   font-size: 2.5rem;
 }
 
-.below-header-1 h5{
+.below-header-1 h5 {
   color: #fff !important;
   font-weight: 500 !important;
 }
 
 .below-header-2 {
+  width: 100%;
   display: flex;
   padding-top: 3%;
   padding-bottom: 3%;
-  padding-left: 3%;
+  padding-left: 7.2%;
 }
 
 .below-header-2-bookmark,
 .below-header-2-user,
 .below-header-2-rating,
 .below-header-2-course-level {
+  width: auto;
   padding-right: 2%;
 }
 
 .below-header-2-bookmark {
-  padding-left: 7%;
+  padding-left: 0%;
 }
 
-.course-section{
+.course-section {
   padding-left: 7%;
   padding-right: 7%;
   padding-top: 1%;
 }
 
-.nav-item{
+.nav-item {
   border: none;
   font-weight: 500;
 }
 
-.nav-item:active{
+.nav-item:active {
   border-bottom: 1px solid #754ffe;
-
 }
 
 .course-details {
@@ -125,6 +126,21 @@
 .nav-item a:focus,
 .nav-item a:hover {
   color: #754ffe; /* Active color */
+}
+
+#Rating {
+  padding-left: 20%;
+  letter-spacing: -0.05rem;
+  line-height: 1.2;
+  font-size: 3.5rem;
+  font-weight: 700 !important;
+}
+
+.review-bars {
+  width: 60%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
 }
 
 .play-icon-container {
@@ -337,29 +353,88 @@
   color: #754ffe;
 }
 
-@media screen and (max-width:992px){
-  .below-header-1 h2{
+@media screen and (max-width: 992px) {
+  .below-header-1 h2 {
     padding-top: 1%;
     padding-left: 8%;
     padding-right: 20%;
   }
-  .below-header-1 h5{
+  .below-header-1 h5 {
     padding-left: 8%;
     padding-right: 12%;
     /* border: 1px solid; */
   }
 
-  .below-header-2{
-    padding-left: 9%;
+  .below-header-2 {
+    padding-left: 15%;
   }
 
-  .course-section{
+  .course-section {
     padding-left: 15%;
     padding-right: 15%;
   }
 
   .course-card {
     margin-top: 0px;
-   
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .below-header-2-course-level {
+    display: none;
+  }
+  .rating-percentage{
+    padding-left: 10%;
+  }
+  .review-bars {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 2%;
+    padding-top: 2%;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .below-header-1 {
+    padding-top: 0%;
+    padding-left: 0;
+  }
+
+  .below-header-1 h2 {
+    padding-top: 10%;
+    padding-left: 4%;
+    padding-right: 2%;
+  }
+  .below-header-1 h5 {
+    padding-left: 4%;
+    padding-right: 2%;
+  }
+
+  .below-header-2 {
+    padding-left: 4%;
+    border: 1px solid;
+  }
+
+  .course-details {
+    padding-left: 4%;
+  }
+
+  .course-section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  #Rating {
+    padding-left: 20%;
+    letter-spacing: -0.05rem;
+    line-height: 1.2;
+    font-size: 3.5rem;
+    font-weight: 700 !important;
+  }
+
+  .review-bars {
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 2%;
+    padding-top: 2%;
   }
 }
