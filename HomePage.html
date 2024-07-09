@@ -20,162 +20,248 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid ">
+    <nav class="navbar navbar-expand-lg" style="border: 1px solid; padding: 0.5% 0%;">
+      <div class="container-fluid">
         <!-- Navbar Brand Icon -->
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" href="" style="border: 1px solid; margin: 0;">
           <img src="Assets\Geeks Logo.svg" alt="Geeks" />
         </a>
 
+        <div class="navbar-left d-flex align-items-center order-lg-2">
+          <a type="button"
+            style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center; border: none;">
+            <div class="image-container">
+              <i class="fa-solid fa-sun" style="padding-top:25%; padding-left: 25%; font-size: 20px; color: gray;"></i>
+            </div>
+          </a>
 
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <!-- Browse Navbar with dropdown -->
-          <ul class="navbar-nav" style="color: black;">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Browse</a>
+          <!-- Notifications -->
+          <a data-bs-toggle="popover" data-bs-trigger="hover"
+            data-bs-content="<div>Notifications </div><hr><div>Notification 2</div><hr><div>Notification 3</div>"
+            data-bs-html="true" data-bs-placement="bottom"
+            style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center; border: 1px solid;">
+            <div class="image-container">
+              <i class="fa-regular fa-bell"
+                style="padding-top: 22%; padding-left: 25%; font-size: 22px; color: gray;"></i>
+            </div>
+          </a>
 
-              <!-- dropdown list for Browse -->
-              <ul class="dropdown-menu">
-                <li class="dropdown-item">
+          <!-- Include Bootstrap JS and Popper.js -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 
-                  <!-- Actual Drop Down of Web Development -->
-                  <div class="dropdown dropend">
-                    <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
-                      Web Development
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown-item">Hello</li>
-                    </ul>
+          <!-- Initialize Popover -->
+          <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+              return new bootstrap.Popover(popoverTriggerEl)
+            })
+          </script>
+
+          <!-- Avatar Button -->
+          <div class="avatar">
+            <a type="button" class="avatar-button" id="avatarPopover" data-bs-toggle="popover" data-bs-html="true"
+              data-bs-content='
+              <div class="">
+                <div class="d-flex">
+                  <div style="width: 10px; border: 1px solid; display: flex;">
+                    <img class="avatar-card" src="Assets/Avatar.jpg" alt="">
+                    <div style="border: 1px solid; left: 0;">
+                      <dt style="color: black;">Annette Black</dt>
+                      <dd style="color: gray;">annette@geeksui.com</dd>
+                    </div>
                   </div>
+                  
+                </div>
+                <hr>
+                <span>
+                <p style="margin-left:10px;"><i class="fa-regular fa-user" style="padding-right: 10%; width:"></i>Profile</p></span>
+                <p><i class="fa-regular fa-star"></i>Description</p>
+                <p><i class="fa-solid fa-gear"></i>Settings</p>
+                <hr>
+                <p><i class="fa-solid fa-power-off"></i>Sign Out</p>
+              </div>
+          </div>
 
-                  <!-- <a
-                    class="nav-link dropdown-toggle"
-                    href=""
-                    data-bs-toggle="dropdown"
-                    >Web Development</a
-                  >
+          '>
+              <img class="avatar-img" src="Assets/Avatar.jpg" alt="">
+            </a>
+          </div>
 
-                  <ul class="dropdown-menu">
-                    <li class="dropdown-item">Hello</li>
-                  </ul> -->
-                </li>
+          <!-- Include Bootstrap JS and dependencies -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-                <li class="dropdown-item">Design</li>
-                <li class="dropdown-item">Mobile App</li>
-                <li class="dropdown-item">IT Software</li>
-                <li class="dropdown-item">Marketing</li>
-                <li class="dropdown-item">Music</li>
-                <li class="dropdown-item">Lifestyle</li>
-                <li class="dropdown-item">Business</li>
-                <li class="dropdown-item">Photography</li>
-              </ul>
-            </li>
+          <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+              return new bootstrap.Popover(popoverTriggerEl, {
+                trigger: 'hover',
+                placement: 'bottom'
+              })
+            })
+          </script>
 
-            <li class="navbar-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Landings</a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item">Education</li>
-                <li class="dropdown-item">Home Academy</li>
-                <li class="dropdown-item">Courses</li>
-                <li class="dropdown-item">Lead COurse</li>
-                <li class="dropdown-item">Request Access</li>
-                <li class="dropdown-item">Saas</li>
-                <li class="dropdown-item">Job Listing</li>
-              </ul>
-            </li>
+          <!-- Button for Menu Bar -->
+          <button type="button" class="navbar-toggler collapsed data-bs-toggle=" collapse" data-bs-target="#myNavbar"
+            style="  padding: 1% 2%; border: 1px solid #754ffe; margin-left: 3%;">
+            <span class="navbar-toggler-icon" style="color:#754ffe;"></span>
+          </button>
+        </div>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Pages</a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item">Courses</li>
-                <li class="dropdown-item">Path</li>
-                <li class="dropdown-item">Blog</li>
-                <li class="dropdown-item">Career</li>
-                <li class="dropdown-item">Portfolio</li>
-                <li class="dropdown-item">Job</li>
-                <li class="dropdown-item">Speciality</li>
-                <hr />
-                <li class="dropdown-item">About</li>
-                <li class="dropdown-item">Help center</li>
-                <li class="dropdown-item">Pricing</li>
-                <li class="dropdown-item">Compare Plan</li>
-                <li class="dropdown-item">Contact</li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
-                Accounts
-              </a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item">Instrructor</li>
-                <li class="dropdown-item">Student</li>
-                <li class="dropdown-item">Admin</li>
-                <hr />
-                <li class="dropdown-item">Sign In</li>
-                <li class="dropdown-item">Sign Up</li>
-                <li class="dropdown-item">Forgot Password</li>
-                <li class="dropdown-item">Edit Profile</li>
-                <li class="dropdown-item">Security</li>
-                <li class="dropdown-item">Social Profile</li>
-                <li class="dropdown-item">Notifications</li>
-                <li class="dropdown-item">Privacy Settings</li>
-                <li class="dropdown-item">Delete Profile</li>
-                <li class="dropdown-item">Linked Accounts</li>
-              </ul>
-            </li>
-          </ul>
+        <!-- Collapsing Navbar -->
+        <div class="collapse navbar-collapse order-lg-1" id="myNavbar" style="border: 1px solid;">
+          <!-- Browse Navbar with dropdown -->
+          <div style="width: auto;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="border: 1px solid;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Browse</a>
 
-          <div class="options">
+                <!-- dropdown list for Browse -->
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">
+
+                    <!-- Actual Drop Down of Web Development -->
+                    <div class="dropdown dropend">
+                      <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
+                        Web Development
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-item">Hello</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="dropdown-item">Design</li>
+                  <li class="dropdown-item">Mobile App</li>
+                  <li class="dropdown-item">IT Software</li>
+                  <li class="dropdown-item">Marketing</li>
+                  <li class="dropdown-item">Music</li>
+                  <li class="dropdown-item">Lifestyle</li>
+                  <li class="dropdown-item">Business</li>
+                  <li class="dropdown-item">Photography</li>
+                </ul>
+                <hr class="d-none d-sm-block d-lg-none">
+
+              </li>
+
+              <li class="navbar-item dropdown">
+                <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Landings</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">Education</li>
+                  <li class="dropdown-item">Home Academy</li>
+                  <li class="dropdown-item">Courses</li>
+                  <li class="dropdown-item">Lead COurse</li>
+                  <li class="dropdown-item">Request Access</li>
+                  <li class="dropdown-item">Saas</li>
+                  <li class="dropdown-item">Job Listing</li>
+                </ul>
+                <hr class="d-none d-sm-block d-lg-none">
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Pages</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">Courses</li>
+                  <li class="dropdown-item">Path</li>
+                  <li class="dropdown-item">Blog</li>
+                  <li class="dropdown-item">Career</li>
+                  <li class="dropdown-item">Portfolio</li>
+                  <li class="dropdown-item">Job</li>
+                  <li class="dropdown-item">Speciality</li>
+                  <hr />
+                  <li class="dropdown-item">About</li>
+                  <li class="dropdown-item">Help center</li>
+                  <li class="dropdown-item">Pricing</li>
+                  <li class="dropdown-item">Compare Plan</li>
+                  <li class="dropdown-item">Contact</li>
+                </ul>
+                <hr class="d-none d-sm-block d-lg-none">
+
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle  text-black" href="" data-bs-toggle="dropdown">
+                  Accounts
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">Instrructor</li>
+                  <li class="dropdown-item">Student</li>
+                  <li class="dropdown-item">Admin</li>
+                  <hr />
+                  <li class="dropdown-item">Sign In</li>
+                  <li class="dropdown-item">Sign Up</li>
+                  <li class="dropdown-item">Forgot Password</li>
+                  <li class="dropdown-item">Edit Profile</li>
+                  <li class="dropdown-item">Security</li>
+                  <li class="dropdown-item">Social Profile</li>
+                  <li class="dropdown-item">Notifications</li>
+                  <li class="dropdown-item">Privacy Settings</li>
+                  <li class="dropdown-item">Delete Profile</li>
+                  <li class="dropdown-item">Linked Accounts</li>
+                </ul>
+                <hr class="d-none d-sm-block d-lg-none">
+              </li>
+            </ul>
+          </div>
+
+          <!-- Options -->
+          <div class="options" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content='
+                 <div class="options-popover">
+                   <div class="popover-body">
+                     <a href="#" style="text-decoration: none;">
+                       <i class="fas fa-book me-2"></i> Documentations
+                     </a>
+                   </div>
+                   <hr>
+                   <div class="popover-body">
+                     <a href="#" style="text-decoration: none;">
+                       <i class="fas fa-file-alt me-2"></i> Change log
+                     </a>
+                   </div>
+                 </div>' data-bs-placement="bottom">
             <img style="height: 20px" src="Assets\Options.svg" alt="Options" />
           </div>
 
+          <!-- Include Bootstrap JS and Popper.js -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+          <!-- Initialize Popover -->
+          <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+              return new bootstrap.Popover(popoverTriggerEl)
+            })
+          </script>
+          <hr class="d-none d-sm-block d-lg-none">
+
+          <!-- Search Form -->
           <form class="search-bar" action="">
-            <input class="form-control search-bar-field" type="text" placeholder="Search Courses" />
+            <span><i class="fas fa-search"
+                style="color: rgb(149, 149, 149); position: absolute; padding-top: 0.73%; padding-left: 0.5%;"></i></span>
+            <input class="form-control" type="text" placeholder="Search Courses" style="padding-left: 12%;" />
           </form>
-
-
-        </div>
-        <div class="navbar-left">
-          <button class="btn"
-            style="width: auto; height: 8%; margin-right: 1%; padding: 0; justify-items: center; border: 1px solid;">
-            <div class="image-container">
-              <i class="fa-solid fa-sun" style="padding-top: 25%; font-size: 22px; color: gray;"></i>
-            </div>
-          </button>
-
-          <button class="btn"
-            style="width: auto; height: 8%; margin-right: 1%; padding: 0; justify-items: center; border: 1px solid;">
-            <div class="image-container">
-              <i class="fa-regular fa-bell" style="padding-top: 25%; font-size: 22px; color: gray;"></i>
-            </div>
-          </button>
-
-          <div class="avatar ">
-            <img class="avatar-img" src="Assets\Avatar.jpg" alt="">
-          </div>
-
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myNavbar"
-            style="border: 1px solid;">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
       </div>
     </nav>
   </header>
 
+  <!-- Below Header -->
   <div class="container-fluid row below-header">
-    <div class="col-lg-6" >
+    <div class="col-lg-6">
       <div class="row-lg-12">
-      <h2><b>Welcome to Geeks UI Learning Application</b></h2>
-      <p class="h4">Hand-picked Instructor and expertly crafted courses, designed for the modern students and
-        entrepreneur.</p>
+        <h1>Welcome to Geeks UI Learning Application</h1>
+        <p class="h4">Hand-picked Instructor and expertly crafted courses, designed for the modern students and
+          entrepreneur.</p>
       </div>
-      <div class="row-lg-12 buttons-container" >
+      <!-- Buttons -->
+      <div class="row-lg-12 buttons-container">
         <button class="btn btn-dark d-flex text-light">Browse Courses</button>
         <button class="btn btn-light d-flex">Are You Instructor?</button>
       </div>
     </div>
-    <!-- Main Image COntainer -->
+
+    <!-- Main Image Container -->
     <div class="col-lg-6 below-header-2">
       <img class="below-header-image" src="Assets/main image.png" alt="">
     </div>
@@ -184,36 +270,37 @@
 
   <div class="headlines">
     <div class="container-fluid row">
-      <div class="col-md-4 col-sm-6 d-flex headlines-1">
+      <div class="col-lg-4 col-md-6 d-flex headlines-1">
 
         <div class="d-flex headlines-image-container">
-          <i class="fa fa-video-camera headlines-image" aria-hidden="true"></i>
+          <span class="headlines-image">
+            <i class="fa fa-video-camera" aria-hidden="true"></i></span>
         </div>
-        <div class="headlines">
+        <div style="padding-left: 2%;">
           <dt>30,000 online courses </dt>
           <dd>Enjoy a variety of fresh topics</dd>
         </div>
       </div>
 
 
-      <div class="col-md-4 col-sm-6 d-flex headlines-1">
+      <div class="col-lg-4 col-md-6 d-flex headlines-1">
 
         <div class="d-flex headlines-image-container">
           <i class="fa-solid fa-user headlines-image" aria-hidden="true"></i>
 
         </div>
-        <div class="headlines">
+        <div style="padding-left: 2%;">
           <dt>Expert instruction</dt>
           <dd>Find the right instructor for you</dd>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 d-flex headlines-1">
+      <div class="col-lg-4 col-md-6 d-flex headlines-1">
 
         <div class="d-flex headlines-image-container">
           <i class="fa-solid fa-clock headlines-image" aria-hidden="true"></i>
 
         </div>
-        <div class="headlines">
+        <div style="padding-left: 2%;">
           <dt>Lifetime access
           </dt>
           <dd>Learn on your schedule </dd>
@@ -222,6 +309,7 @@
     </div>
   </div>
 
+  <!-- Cards -->
   <div class="container-fluid cards-container-1">
     <br>
     <br>
@@ -236,7 +324,7 @@
           <div class="row">
 
             <!--Active Card 01 -->
-            <div class="col-md-6 col-lg-3 card-container" >
+            <div class="col-sm-6 col-lg-3 card-container">
               <div class="card card-style">
                 <img class="card-image-top card-image-style" src="Assets\course-graphql.f5dec42e4ae0102ebffa.jpg"
                   alt="Card Image">
@@ -295,7 +383,7 @@
             </div>
 
             <!--Active Card 02 -->
-            <div class="col-md-6 col-lg-3 card-container">
+            <div class="col-sm-6 col-lg-3 card-container">
               <div class="card card-style">
                 <img class="card-image-top card-image-style" src="Assets\javscript.jpg" alt="Card Image">
                 <div class="card-body">
@@ -353,7 +441,7 @@
             </div>
 
             <!--Active Card 03 -->
-            <div class="col-md-6 col-lg-3 card-container">
+            <div class="col-sm-6 col-lg-3 card-container">
               <div class="card card-style ">
                 <img class="card-image-top card-image-style" src="Assets\node js.jpg" alt="Card Image">
                 <div class="card-body">
@@ -411,7 +499,7 @@
             </div>
 
             <!-- Active Card 04-->
-            <div class="col-md-6 col-lg-3 card-container">
+            <div class="col-sm-6 col-lg-3 card-container">
 
               <div class="card card-style">
                 <img class="card-image-top card-image-style" src="Assets\laravel.jpg" alt="Card Image">
@@ -474,64 +562,743 @@
         <!-- Inactive COursel Items -->
 
         <div class="carousel-item carousel-style">
-          <div class="card-container">
-          <div class="card card-style">
-            <img class="card-image-top card-image-style" src="Assets\javscript.jpg" alt="Card Image">
-            <div class="card-body">
-              <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
-              <div class="card-text">
-                <div class="d-flex">
-                  <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+          <div class="row">
 
-                  <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                      viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                      <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                      <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                    </svg>Advance</p>
-                </div>
-                <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                      style="width: 0.92rem; height: 0.92rem;">
-                      <path
-                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                        style="fill: currentcolor;"></path>
-                    </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                      <path
-                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                        style="fill: currentcolor;"></path>
-                    </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                      <path
-                        d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                        style="fill: currentcolor;"></path>
-                    </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                      <path
-                        d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                        style="fill: currentcolor;"></path>
-                    </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                      <path
-                        d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                        style="fill: currentcolor;"></path>
-                    </svg>2.5</span>
-                  <small style="color: gray;">(1500)</small>
-                </p>
-                <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+            <!-- InActive Card 01 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\laravel.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
 
-                <hr>
-                <div class="d-flex" style="width: 100%;">
-                  <div style="width: 15%;">
-                    <img class="card-avatar" src="Assets\avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\Sobo.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sobo Rikhan</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
                   </div>
-                  <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
-                  <div style="align-items: right; align-content: right; width: 5%;">
-                    <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- InActive Card 02 -->
+            <div class="card-container col-sm-6 col-lg-3">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\javscript.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
               </div>
             </div>
 
+            <!-- InActive Card 03 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style ">
+                <img class="card-image-top card-image-style" src="Assets\node js.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\Sina.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sina Ray</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- InActive Card 04 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <button class="carousel-control-prev" data-bs-target="#course-card" type="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next " data-bs-target="#course-card" type="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon c"></span>
+
+      </button>
+    </div>
+
+    <br>
+    <h1 style="padding-left: 5%;">Most Popular</h1>
+    <br>
+
+    <div id="course-card" class="carousel slide course-carousel" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row">
+
+            <!--Active Card 01 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Active Card 02 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\javscript.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets/Avatar.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Jenny Wilson</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Active Card 03 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style ">
+                <img class="card-image-top card-image-style" src="Assets\node js.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\Sina.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sina Ray</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Active Card 04-->
+            <div class="col-sm-6 col-lg-3 card-container">
+
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\laravel.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\Sobo.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sobo Rikhan</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inactive COursel Items -->
+
+        <div class="carousel-item carousel-style">
+          <div class="row">
+
+            <!-- InActive Card 01 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\laravel.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\Sobo.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sobo Rikhan</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- InActive Card 02 -->
+            <div class="card-container col-sm-6 col-lg-3">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\javscript.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- InActive Card 03 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style ">
+                <img class="card-image-top card-image-style" src="Assets\node js.jpg" alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\Sina.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sina Ray</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- InActive Card 04 -->
+            <div class="col-sm-6 col-lg-3 card-container">
+              <div class="card card-style">
+                <img class="card-image-top card-image-style" src="Assets\course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  alt="Card Image">
+                <div class="card-body">
+                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
+                  <div class="card-text">
+                    <div class="d-flex">
+                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
+
+                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
+                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+                        </svg>Advance</p>
+                    </div>
+                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
+                          style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
+                          <path
+                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                            style="fill: currentcolor;"></path>
+                        </svg>2.5</span>
+                      <small style="color: gray;">(1500)</small>
+                    </p>
+                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
+
+                    <hr>
+                    <div class="d-flex" style="width: 100%;">
+                      <div style="width: 15%;">
+                        <img class="card-avatar" src="Assets\avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                      </div>
+                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
+                      <div style="align-items: right; align-content: right; width: 5%;">
+                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -553,7 +1320,7 @@
         </p>
       </div>
 
-    <div class="col-md-6 footer-2 d-flex justify-content-md-end justify-content-center">
+      <div class="col-md-6 footer-2 d-flex justify-content-md-end justify-content-center">
         <a class="footer-link" href="">Privacy</a>
         <a class="footer-link" href="">Terms</a>
         <a class="footer-link" href="">Feedback</a>
