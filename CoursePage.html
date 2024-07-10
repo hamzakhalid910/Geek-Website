@@ -22,9 +22,9 @@
 </head>
 
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0.5% 0%;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 8px 15px;">
     <!-- Navbar Brand Icon -->
-    <a class="navbar-brand" href="" style=" margin: 0;">
+    <a class="navbar-brand" href="" style=" margin-left: 0%;">
       <img src="Assets\Geeks Logo.svg" alt="Geeks" />
     </a>
 
@@ -43,7 +43,8 @@
         data-bs-html="true" data-bs-placement="bottom"
         style="width: auto; height: 5%; margin-right: 1%; padding: 0; justify-items: center;">
         <div class="image-container">
-          <i class="fa-regular fa-bell" style="padding-top: 22%; padding-left: 25%; font-size: 22px; color: gray;"></i>
+          <i class="fa-regular fa-bell"
+            style="padding-top: 22%; padding-left: 25%; font-size: 22px; color: gray;"></i>
         </div>
       </a>
 
@@ -78,7 +79,7 @@
 
       <!-- Button for Menu Bar -->
       <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#myNavbar"
-        style="padding: 1% 2%; border: 1px solid #754ffe; margin-left: 3%;">
+        style="padding: 1% 2%; margin-left: 3%; border: 1px solid #754ffe;">
         <span class="navbar-toggler-icon" style="color:#754ffe;"></span>
       </button>
     </div>
@@ -93,17 +94,19 @@
 
             <!-- dropdown list for Browse -->
             <ul class="dropdown-menu">
-              <li class="dropdown-item">
-
-                <!-- Actual Drop Down of Web Development -->
-                <div class="dropdown dropend">
-                  <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
-                    Web Development
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li class="dropdown-item">Hello</li>
-                  </ul>
-                </div>
+              <li class="dropdown-submenu dropend" >
+                <a class="dropdown-item dropdown-toggle" href="#">Web Development</a>
+                <ul class="dropdown-menu" style="padding: 4%;">
+                  <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                  <li><a class="dropdown-item" href="#">React</a></li>
+                  <li><a class="dropdown-item" href="#">GraphQL</a></li>
+                  <li><a class="dropdown-item" href="#">Gatsby</a></li>
+                  <li><a class="dropdown-item" href="#">Grunt</a></li>
+                  <li><a class="dropdown-item" href="#">Svelte</a></li>
+                  <li><a class="dropdown-item" href="#">Meteor</a></li>
+                  <li><a class="dropdown-item" href="#">HTML 5</a></li>
+                  <li><a class="dropdown-item" href="#">Andular</a></li>
+                </ul>
               </li>
 
               <li class="dropdown-item">Design</li>
@@ -115,14 +118,15 @@
               <li class="dropdown-item">Business</li>
               <li class="dropdown-item">Photography</li>
             </ul>
-            <hr class="d-none d-sm-block d-lg-none">
+            <hr style="padding: 0; margin: 0;" class="d-none d-sm-block d-lg-none">
 
           </li>
 
-          <li class="navbar-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-black" href="" data-bs-toggle="dropdown">Landings</a>
             <ul class="dropdown-menu">
-              <li class="dropdown-item">Education</li>
+              <li class="dropdown-item">Education <span class="badge" style="background-color: #754ffe;">New</span>
+              </li>
               <li class="dropdown-item">Home Academy</li>
               <li class="dropdown-item">Courses</li>
               <li class="dropdown-item">Lead COurse</li>
@@ -130,7 +134,7 @@
               <li class="dropdown-item">Saas</li>
               <li class="dropdown-item">Job Listing</li>
             </ul>
-            <hr class="d-none d-sm-block d-lg-none">
+            <hr style="padding: 0; margin: 0;" class="d-none d-sm-block d-lg-none">
           </li>
 
           <li class="nav-item dropdown">
@@ -150,7 +154,7 @@
               <li class="dropdown-item">Compare Plan</li>
               <li class="dropdown-item">Contact</li>
             </ul>
-            <hr class="d-none d-sm-block d-lg-none">
+            <hr style="padding: 0; margin: 0;" class="d-none d-sm-block d-lg-none">
 
           </li>
           <li class="nav-item dropdown">
@@ -173,10 +177,32 @@
               <li class="dropdown-item">Delete Profile</li>
               <li class="dropdown-item">Linked Accounts</li>
             </ul>
-            <hr class="d-none d-sm-block d-lg-none">
+            <hr style="padding: 0; margin: 0;" class="d-none d-sm-block d-lg-none">
           </li>
         </ul>
       </div>
+
+      <script>
+        // Custom JavaScript to handle nested dropdowns
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
+            element.addEventListener('click', function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              const submenu = element.nextElementSibling;
+              submenu.classList.toggle('show');
+            });
+          });
+          // Close submenus when clicking outside
+          document.addEventListener('click', function (e) {
+            document.querySelectorAll('.dropdown-submenu .dropdown-menu').forEach(function (submenu) {
+              if (!submenu.contains(e.target)) {
+                submenu.classList.remove('show');
+              }
+            });
+          });
+        });
+      </script>
 
       <!-- Options -->
       <div class="options" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content='
@@ -207,12 +233,11 @@
           return new bootstrap.Popover(popoverTriggerEl)
         })
       </script>
-      <hr class="d-none d-sm-block d-lg-none">
+            <hr style="padding: 0; margin: 1% 0%;" class="d-none d-sm-block d-lg-none">
 
       <!-- Search Form -->
       <form class="search-bar" action="">
-        <span><i class="fas fa-search"
-            style="color: rgb(149, 149, 149); position: absolute; font-size: 80%; padding-top: 0.8%; padding-left: 0.5%;"></i></span>
+        <span><i class="fas fa-search"></i></span>
         <input class="form-control" type="text" placeholder="Search Courses" id="search-bar-field"></input>
       </form>
     </div>
@@ -1678,7 +1703,7 @@
               </div>
 
               <!--Active Card 02 -->
-              <div class="col-sm-6 col-lg-3 card-container">
+              <div class="col-md-6 col-lg-3 card-container">
                 <div class="card card-style">
                   <img class="card-image-top card-image-style" src="Assets\javscript.jpg" alt="Card Image">
                   <div class="card-body">
@@ -1736,7 +1761,7 @@
               </div>
 
               <!--Active Card 03 -->
-              <div class="col-sm-6 col-lg-3 card-container">
+              <div class="col-md-6 col-lg-3 card-container">
                 <div class="card card-style ">
                   <img class="card-image-top card-image-style" src="Assets\node js.jpg" alt="Card Image">
                   <div class="card-body">
@@ -1794,7 +1819,7 @@
               </div>
 
               <!-- Active Card 04-->
-              <div class="col-sm-6 col-lg-3 card-container">
+              <div class="col-md-6 col-lg-3 card-container">
 
                 <div class="card card-style">
                   <img class="card-image-top card-image-style" src="Assets\laravel.jpg" alt="Card Image">
